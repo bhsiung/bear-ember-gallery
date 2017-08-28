@@ -1,0 +1,27 @@
+<label
+  class={{if visuallyHideLabel "visually-hidden" ""}}
+  for={{concat elementId '-selector'}}
+>
+  {{selectorLabel}}
+</label>
+<select id={{concat elementId '-selector'}} onChange={{action 'dropdownChange'}}>
+  {{#each options as |option index|}}
+    <option
+      value={{option.value}}
+      selected={{eq currentOption option}}
+    >
+      {{option.displayText}}
+    </option>
+  {{/each}}
+</select>
+<label
+  class={{if visuallyHideLabel "visually-hidden" ""}}
+  for={{concat elementId "-input"}}
+>
+  the input
+</label>
+<input
+  id={{concat elementId '-input'}}
+  placeholder={{currentOption.placeholder}}
+  onChange={{action inputChanged}}
+/>

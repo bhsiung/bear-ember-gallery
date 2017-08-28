@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('gallery', function() {
+    this.route('dropdown-input-combo');
+  });
 });
 
 export default Router;
