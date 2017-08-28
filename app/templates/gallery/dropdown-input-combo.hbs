@@ -1,12 +1,12 @@
 <h2>Dropdown input combo</h2>
 {{dropdown-input-combo
-  options=model.options
-  selectorLabel="select type"
+  defaultIndex=0
   inputLabel="value"
-  defaultOptionIndex=2
-  visuallyHideLabel=true
-  dropdownChanged=(route-action 'dropdownChanged')
-  inputChanged=(route-action 'inputChanged')
+  options=model.options
+  dropdownLabel="select type"
+  visuallyHideLabels=true
+  dropdownChangedAction=(route-action 'dropdownChangedAction')
+  inputChangedAction=(route-action 'inputChangedAction')
 }}
 <p>type: {{model.type}}, value: {{model.value}}</p>
 {{outlet}}

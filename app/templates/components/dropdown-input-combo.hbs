@@ -1,8 +1,8 @@
 <label
-  class={{if visuallyHideLabel "visually-hidden" ""}}
+  class={{if visuallyHideLabels "visually-hidden" ""}}
   for={{concat elementId '-selector'}}
 >
-  {{selectorLabel}}
+  {{dropdownLabel}}
 </label>
 <select id={{concat elementId '-selector'}} onChange={{action 'dropdownChange'}}>
   {{#each options as |option index|}}
@@ -15,7 +15,7 @@
   {{/each}}
 </select>
 <label
-  class={{if visuallyHideLabel "visually-hidden" ""}}
+  class={{if visuallyHideLabels "visually-hidden" ""}}
   for={{concat elementId "-input"}}
 >
   the input
@@ -23,5 +23,5 @@
 <input
   id={{concat elementId '-input'}}
   placeholder={{currentOption.placeholder}}
-  onChange={{action inputChanged}}
+  onChange={{action inputChangedAction}}
 />

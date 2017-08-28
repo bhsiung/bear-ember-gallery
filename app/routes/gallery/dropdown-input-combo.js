@@ -14,10 +14,10 @@ export default Ember.Route.extend({
     }
   },
   actions: {
-    dropdownChanged (e) {
+    dropdownChangedAction (e) {
       this.controller.set('model.type', e.target.value);
     },
-    inputChanged (e) {
+    inputChangedAction (e) {
       this.controller.set('model.value', e.target.value);
     },
   },
