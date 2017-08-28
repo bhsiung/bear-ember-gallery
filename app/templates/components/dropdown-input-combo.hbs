@@ -1,10 +1,15 @@
 <label
-  class={{if visuallyHideLabels "visually-hidden" ""}}
+  class="dropdown-input-combo__dropdown-label
+    {{if visuallyHideLabels "visually-hidden" ""}}"
   for={{concat elementId '-selector'}}
 >
   {{dropdownLabel}}
 </label>
-<select id={{concat elementId '-selector'}} onChange={{action 'dropdownChange'}}>
+<select
+  class="drowdown-input-combo__dropdown"
+  id={{concat elementId '-selector'}}
+  onChange={{action 'dropdownChange'}}
+>
   {{#each options as |option index|}}
     <option
       value={{option.value}}
@@ -15,12 +20,14 @@
   {{/each}}
 </select>
 <label
-  class={{if visuallyHideLabels "visually-hidden" ""}}
+  class="drowdown-input-combo__input-label
+    {{if visuallyHideLabels "visually-hidden" ""}}"
   for={{concat elementId "-input"}}
 >
   the input
 </label>
 <input
+  class="drowdown-input-combo__input"
   id={{concat elementId '-input'}}
   placeholder={{currentOption.placeholder}}
   onChange={{action inputChangedAction}}
