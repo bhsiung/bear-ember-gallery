@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'bear-ember-test',
+    modulePrefix: 'bear-ember-gallery',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
