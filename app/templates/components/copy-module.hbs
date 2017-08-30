@@ -1,0 +1,18 @@
+<textarea
+  class="copy-module__textarea"
+  aria-describedby={{concat elementId "-overlay"}}
+  tabindex=-1
+  readonly
+>
+  {{~content~}}
+</textarea>
+<div
+  class="copy-module__overlay" id={{concat elementId "-overlay"}}
+>
+  <p
+    class="copy-module__status
+      {{if hasCopied "copy-module__status--copied" ""}}"
+  >
+    {{statusText}}
+  </p>
+</div>
